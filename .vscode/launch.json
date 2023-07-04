@@ -1,0 +1,51 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "Test",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-HelloSpringBootApplication<hello-spring-boot>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.skillstorm.hellospringboot.HelloSpringBootApplication",
+      "projectName": "hello-spring-boot",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-SpringMvcApplication<spring-mvc>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.skillstorm.springmvc.SpringMvcApplication",
+      "projectName": "spring-mvc",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-SpringDataJpaApplication<spring-data-jpa>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.skillstorm.springdatajpa.SpringDataJpaApplication",
+      "projectName": "spring-data-jpa",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-SpringAopApplication<spring-aop>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.skillstorm.springaop.SpringAopApplication",
+      "projectName": "spring-aop",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--
+    POM - Project Object Model
+      - represents your entire project for maven
+
+      - maven uses the info in your POM to decide how to build your project
+  -->
+
+  <!--
+
+    BUILD LIFECYCLE
+
+    1. validate
+        - ensure that your project has all the necessary components
+            ex. will fail if project coordinates are missing
+        - makes sure pom file is correct
+    
+    2. compile
+        - compiles everything in src folder
+            fails if code has errors
+    
+    3. test
+        - runs all of your unit tests (individual blocks of code)
+            fails if tests don't pass
+
+    4. package
+        - packages compiled code into JAR or WAR - depending on what you specify
+
+    5. verify 
+        - runs all of your integration tests
+            all of the pieces working together
+    
+    6. install
+        - installs the created package to your local repository (.m2)
+            once installed, it can be used in other maven projects
+
+    7. deploy
+        - puts created package on maven central
+
+  -->
+
+
+  <!-- PROJECT COORDINATES -->
+  <groupId>com.skillstorm</groupId>             <!-- project domain, usually a business name of some kind -->
+  <artifactId>day3-age-validator</artifactId>   <!-- project name - no caps or spaces -->
+  <version>1.0.0</version>                      <!-- major.minor.patch -->
+
+  <name>Day3 Age Validator</name>               <!-- you actual project name; optional -->  
+  <description>Validates peoples ages</description>   <!-- a description of your project; optional --> 
+
+
+<!-- 
+  basically variables you can use throughout your pom
+    maven will also use some of these
+
+-->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source> <!-- change Java version to 1.8 -->
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <!-- <junit.version>4.11</junit.version>    you can declare your own properties if you want -->
+  </properties>
+
+  <!--
+    DEPENDECY MANAGEMENT
+        dependencies - third party libraries that your project is using
+
+        external repository with ALL dependencies in the world - Maven Central Repository
+        .m2 folder is your local copy of maven central
+
+        when maven builds your project, it checks for dependencies
+          it will first search in .m2 for those
+          if it can't find in .m2, it downloads from maven central
+
+
+  -->
+  <dependencies>
+    <dependency>
+
+      <!-- coordinates for dependency-->
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <!-- <version>${junit.version}</version>    this is how you reference a property-->
+      <scope>test</scope>
+      <!-- 
+        scope: compile (default), test (won't include in deployments), runtime
+      -->
+    </dependency>
+  </dependencies>
+</project>

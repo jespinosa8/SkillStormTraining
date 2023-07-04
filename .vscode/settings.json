@@ -1,0 +1,6 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "maven.excludedFolders": [],
+  "maven.executable.preferMavenWrapper": true,
+  "java.compile.nullAnalysis.mode": "disabled"
+}
