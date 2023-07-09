@@ -4,11 +4,11 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +24,7 @@ import com.skillstorm.springaop.models.Movie;
 
 @RestController
 @RequestMapping("/movies")
+@CrossOrigin("http://127.0.0.1:3000/")            // specifies who is allowed to make requests, it defaults to allow everyone
 public class MovieController {
   
   @Autowired

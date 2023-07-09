@@ -60,13 +60,13 @@ const berries = fruits.filter(function (fruit) {
   return fruit.includes('berry');
 });
 
-console.log(berries);
+console.log(berries);    // outputs a new array that only includes the elements with the 'berry' string in them
 
 const numbers = [10, 20, 30, 40, 50];
 
 // reduce is going to return some accumulated value
 const sum = numbers.reduce(function (prevValue, currValue) {
-  // prevValue will be updated eachiteration to be what was RETURNED by the last iteration
+  // prevValue will be updated each iteration to be what was RETURNED by the last iteration
 
   return prevValue + currValue;
 });
@@ -92,8 +92,8 @@ let count = 10;
 // setInterval runs the callback function each time the given time elapses. Need to make sure to use the clearInterval to stop it
 const countdown = setInterval(() => {
   if (count <= 0) {
-    console.log('LIFTOFF!!!');    // not a break, only stops the Interval from continuing after the iteration
-    clearInterval();
+    console.log('LIFTOFF!!!');    
+    clearInterval();        // not a break, only stops the Interval from continuing after the iteration
   }
 
   console.log('Current count: ' + count);
